@@ -29,7 +29,7 @@ public class FaceVerificationService {
     public FaceVerificationService(@Value("${face.service.url}") String baseUrl) {
         this.baseUrl = baseUrl;
         SimpleClientHttpRequestFactory f = new SimpleClientHttpRequestFactory();
-        f.setConnectTimeout(3000);
+        f.setConnectTimeout(5000);
         f.setReadTimeout(120000); // face detect + 4 rotations me time lagta hai
         this.rest = new RestTemplate(f);
     }

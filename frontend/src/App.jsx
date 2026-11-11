@@ -6,6 +6,7 @@ import SetPin from "./pages/SetPin";
 import AdminDashboard from "./pages/AdminDashboard";
 import VoterDashboard from "./pages/VoterDashboard";
 import CandidatePage from "./pages/CandidatePage";
+import ForgotPin from "./pages/ForgotPin";
 
 export default function App() {
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/login" element={<Login navigate={navigate} />} />
             <Route path="/register/set-pin" element={<SetPin />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/forgot-pin" element={<ForgotPin/>}/>
         </Routes>
     );
 }
